@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import './Header.css'; // Importer les styles
 
 const Header = ({ isAuthenticated, setIsAuthenticated }) => {
   const navigate = useNavigate();
@@ -20,9 +21,9 @@ const Header = ({ isAuthenticated, setIsAuthenticated }) => {
   };
 
   return (
-    <header className="bg-gray-900 text-white p-4 flex justify-between items-center">
-      <h1 className="text-3xl font-bold">WoW Private Server</h1>
-      <nav>
+    <header className="wow-header">
+      <h1>WoW Private Server</h1>
+      <nav className="wow-nav">
         <Link to="/" className="mx-2 hover:underline">Home</Link>
         {isAuthenticated ? (
           <>
